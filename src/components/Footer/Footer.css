@@ -1,0 +1,50 @@
+.f-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  bottom: 0rem;
+  background-color: white;
+  width: 100vw;
+}
+
+.f-container {
+  padding: 2rem 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tt {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgb(90, 0, 128);
+  margin-bottom: 0.8rem;
+}
+
+.tm {
+  text-align: center;
+  font-size: medium;
+  font-weight: 600;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .tt {
+    font-size: 42px;
+    margin-bottom: 0.8rem;
+  }
+
+  .tm {
+    font-size: medium;
+    font-weight: 600;
+  }
+
+  .f-wrapper {
+    z-index: 9;
+    bottom: 0rem;
+  }
+}

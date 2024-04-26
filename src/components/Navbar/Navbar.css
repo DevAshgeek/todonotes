@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-wrapper {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10 !important;
+}
+
+.nav-container {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem 1rem;
+  background-color: white;
+  z-index: 10 !important;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(90, 0, 128);
+}
+
+.rs {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mrs {
+  display: none;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  margin: 0 6px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  background-color: transparent;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+button.login {
+  background-color: #0bb011;
+}
+
+button.signup {
+  background-color: #284faa;
+}
+button.logout {
+  background-color: #ff5252;
+}
+
+button.logout:hover {
+  box-shadow: 3px 12px 19px #ff1744 !important;
+}
+
+button.login:hover {
+  box-shadow: 3px 12px 19px #26ac01 !important;
+}
+
+button.signup:hover {
+  box-shadow: 3px 12px 19px #230afe !important;
+}
+
+button.logout:focus {
+  box-shadow: 3px 12px 19px #ff1744 !important;
+}
+
+button.login:focus {
+  box-shadow: 3px 12px 19px #25ee0b !important;
+}
+
+button.signup:focus {
+  box-shadow: 3px 12px 19px #230afe !important;
+}
+
+@media (min-width: 769px) {
+  .rs button.hamburgermenu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 1rem 1.5rem;
+    z-index: 99;
+  }
+
+  .mrs button.closedhamburgermenu,
+  .mrs button.openedhamburgermenu {
+    display: flex;
+    z-index: 11;
+    padding: 2px 1px 2px 1px;
+  }
+
+  .mbannerbtns {
+    z-index: 100;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    position: fixed;
+    top: 3.4rem;
+    left: 0rem;
+    width: 100vw;
+    height: 92vh;
+    background-color: white;
+    padding-top: 9rem;
+    /* border-radius: 30px; */
+    border-top: 3px solid rgb(243, 238, 96);
+  }
+
+  .mbannerbtns hr {
+    margin: -1.5rem;
+    border: 1px solid rgb(163, 136, 163);
+    width: 15%;
+    border-radius: 99px;
+    margin-bottom: 1rem;
+  }
+
+  .bannerbtns {
+    display: none;
+  }
+
+  .mbannerbtns button.login,
+  .mbannerbtns button.signup,
+  .mbannerbtns button.logout {
+    padding: 10px 8px;
+    border: none;
+    margin: 0;
+    background-color: white;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: 700;
+    cursor: pointer;
+    border-right: 4px solid rgb(243, 238, 96);
+    border-bottom: 5px solid rgb(243, 238, 96);
+    border-top: 1px solid rgb(243, 238, 96);
+  }
+
+  .mbannerbtns button.logout {
+    color: #ff2625;
+  }
+  .mbannerbtns button.signup {
+    color: #012d94;
+  }
+  .mbannerbtns button.login {
+    color: #0bb011;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .mrs {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .rs {
+    display: none;
+  }
+
+  button:hover {
+    box-shadow: 3px 12px 19px rgba(228, 156, 156, 0.2);
+  }
+}
