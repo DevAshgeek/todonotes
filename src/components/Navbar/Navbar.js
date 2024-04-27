@@ -18,7 +18,7 @@ const Navbar = ({ isLoggedIn, onlogin }) => {
     const logout = () => {
         dispatch(clearUser());
         dispatch(resetTasks());
-        navigate('/home'); // Redirect user to login page
+        navigate('/'); // Redirect user to login page
     };
 
     const handleSignup = () => {
@@ -38,7 +38,7 @@ const Navbar = ({ isLoggedIn, onlogin }) => {
                 {/* left side */}
                 <div className="ls">
                     <span className="logo">
-                        <Link to={!isLoggedIn ? "/home" : ""} >TODO NOTES✔️</Link>
+                        <Link to={!isLoggedIn ? "/" : ""} >TODO NOTES✔️</Link>
                     </span>
                 </div>
 
