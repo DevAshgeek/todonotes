@@ -23,7 +23,7 @@ function App() {
         <Route path="*" element={<Navigate replace to={isLoggedIn ? "/todo" : "/home"} />} /> */}
         <Route
           path="/"
-          element={<Navigate replace to={isLoggedIn ? "/todo" : "/"} />}
+          element={<Navigate replace to={isLoggedIn ? "/todo" : ""} />}
         />
         <Route
           path="/login"
