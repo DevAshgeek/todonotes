@@ -15,15 +15,9 @@ function App() {
     <div className="App">
 
       <Routes className="approutes">
-        {/* <Route path="/" element={<Navigate replace to={isLoggedIn ? "/todo" : "/home"} />} />
-        <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate replace to="/todo" />} />
-        <Route path="/todo" element={isLoggedIn ? <Todo /> : <Navigate replace to="/login" />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="*" element={<Navigate replace to={isLoggedIn ? "/todo" : "/home"} />} /> */}
         <Route
           path="/"
-          element={<Navigate replace to={isLoggedIn ? "/todo" : "/home"} />}
+          element={isLoggedIn ? <Navigate replace to="/todo" /> : <Home isHomePage={isHomePage} />}
         />
         <Route
           path="/login"
@@ -34,7 +28,7 @@ function App() {
           element={isLoggedIn ? <Todo isHomePage={isHomePage} /> : <Navigate replace to="/login" />}
         />
         <Route path="/signup" element={<Signup isHomePage={isHomePage} />} />
-        <Route path="/home" element={<Home isHomePage={isHomePage} />} />
+        {/* <Route path="/home" element={<Home isHomePage={isHomePage} />} /> */}
         <Route
           path="*"
           element={<Navigate replace to={isLoggedIn ? "/todo" : "/"} />}
