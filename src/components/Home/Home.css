@@ -584,7 +584,7 @@ div#homed {
   /* pre footer section */
 
   .pre-footer {
-    top: 168rem;
+    top: 188rem;
   }
 
   .pfcont {
@@ -605,7 +605,7 @@ div#homed {
   }
 
   .homehrd {
-    top: 198rem;
+    top: 218rem;
   }
 
   .scrollttbtn {
@@ -616,6 +616,6 @@ div#homed {
 
   /* footer section */
   #homefooter {
-    top: 212rem;
+    top: 232rem;
   }
 }
