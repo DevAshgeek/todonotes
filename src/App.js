@@ -23,7 +23,7 @@ function App() {
         <Route path="*" element={<Navigate replace to={isLoggedIn ? "/todo" : "/home"} />} /> */}
         <Route
           path="/"
-          element={<Navigate replace to={isLoggedIn ? "/todo" : "/"} />}
+          element={<Navigate replace to={isLoggedIn ? "/todo" : "/home"} />}
         />
         <Route
           path="/login"
@@ -34,7 +34,7 @@ function App() {
           element={isLoggedIn ? <Todo isHomePage={isHomePage} /> : <Navigate replace to="/login" />}
         />
         <Route path="/signup" element={<Signup isHomePage={isHomePage} />} />
-        <Route path="/" element={<Home isHomePage={isHomePage} />} />
+        <Route path="/home" element={<Home isHomePage={isHomePage} />} />
         <Route
           path="*"
           element={<Navigate replace to={isLoggedIn ? "/todo" : "/"} />}
