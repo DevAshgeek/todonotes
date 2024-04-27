@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from "react"
 import "./Login.css"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import { useDispatch } from "react-redux"
 import { setUser } from "../Reducer/loginReducer"
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer";
 import { motion } from "framer-motion";
-import { desVariants, tagVariants, xVariants, xVariants2 } from "../../utils/animations";
+import { desVariants, tagVariants, xVariants2 } from "../../utils/animations";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function Login() {
     // { setIsLoggedIn }
     async function handleLogin() {
         try {
-            const response = await axios.get("http://localhost:4000/users", {
+            const response = await axios.get("https://todonotes-api.onrender.com/users", {
                 headers: {
                     email: emailref.current.value,
                     password: passwordref.current.value

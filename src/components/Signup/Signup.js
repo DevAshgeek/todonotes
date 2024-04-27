@@ -37,7 +37,7 @@ export default function Signup() {
 
         // user register validation 
         try {
-            const response = await axios.post("http://localhost:4000/register", { name: username, email, password });
+            const response = await axios.post("https://todonotes-api.onrender.com/register", { name: username, email, password });
 
             alert("user registered successfully")
             nameref.current.value = "";

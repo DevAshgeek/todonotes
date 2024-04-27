@@ -50,7 +50,7 @@ function Todo() {
     const savetasks = async () => {
 
         try {
-            await axios.post("http://localhost:4000/addTask",
+            await axios.post("https://todonotes-api.onrender.com/addTask",
                 {
                     email: userEmail,
                     tasks: tasks
@@ -67,7 +67,7 @@ function Todo() {
 
     const deleteTodo = async (todoId) => {
         try {
-            const response = await axios.delete('http://localhost:4000/deleteTodo', {
+            const response = await axios.delete('https://todonotes-api.onrender.com/deleteTodo', {
                 data: { email: userEmail, taskId: todoId } // Axios expects the request body for DELETE requests in the `data` property
             });
             console.log("Task deleted successfully", response.data);
@@ -94,7 +94,7 @@ function Todo() {
         const fetchTask = async () => {
             try {
                 console.log(userEmail)
-                const resp = await axios.post("http://localhost:4000/getTasks", { email: userEmail })
+                const resp = await axios.post("https://todonotes-api.onrender.com/getTasks", { email: userEmail })
                 dispatch(setTasks(resp.data));
             }
             catch (err) {
